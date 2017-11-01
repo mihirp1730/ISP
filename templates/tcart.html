@@ -1,0 +1,61 @@
+<ion-view view-title="Cart" ng-init="subtotal()">
+
+<ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_outward()">
+              </button>
+  
+          </ion-nav-buttons>
+
+  <ion-content padding="true">
+<div ng-if="ItmesInCart==='true'">
+ <form ng-submit="Add_outward()">
+
+      <p style="color:#000;">To: {{Tname}}</p>
+      <p>For {{PlanName}}</p> 
+
+      <p style="color:rgba(68, 68, 68, 0.84);">{{Temail}}</p>  
+      <br> 
+      <p><b>Items</b></p>    
+
+      <div ng-repeat="thing in thingsout">
+       
+      <ul class="list"> 
+
+      <li class="item" style="border-bottom-color:rgba(229, 229, 229, 0.66);">
+
+      <p style="color:#000;">{{thing.VariantName}}&nbsp;{{thing.ProductName}}
+
+      <span style="float: right;"><i class="ion-close" ng-click="RemoveItem1($index)"></i></span></p>
+
+      <p style="color:#000;">Qty:{{thing.Quantity}}</p>
+     
+
+      </li>
+
+      </ul>
+
+      </div>   
+
+      
+
+   
+       <br>
+        
+  	     <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+  		     Add
+	       </button>
+
+       
+    </form>
+  </div>
+
+  <center><p ng-if="ItmesInCart==='false'" style="color: red;">No Items In Your Cart</p></center>    
+       
+      
+  </ion-content>
+</ion-view>

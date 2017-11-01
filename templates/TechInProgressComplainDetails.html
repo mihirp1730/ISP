@@ -1,0 +1,72 @@
+<ion-view view-title="Complain">
+
+
+ <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="GoToInprogreeeComplains()">
+              </button>
+  
+          </ion-nav-buttons>
+  <ion-content padding="true">
+
+  <form ng-submit= "update_status_complete(ComplainId)">
+
+   <p ng-show="sss">{{ComplainId}}</p>
+   <div class="card">
+   <p><b>Customer Name</b></p>
+    <p>{{CustomerName}}</p>
+   </div>
+
+  <div class="card">
+   <p><b>Customer Address</b></p>
+    <p>{{Street1}}, {{Street2}}</p>
+    <p>{{City}}-{{ZipCode}}</p>
+   </div> 
+  
+    <div class="card">
+   <p><b>Category</b></p>
+    <p>{{Category}}</p>
+   </div> 
+
+    <div class="card">
+   <p><b>Description</b></p>
+    <p>{{Description}}</p>
+   </div> 
+
+     <div class="card">
+     <p><b>Complain Register Date</b></p>
+      <p>{{RegisterDate | date : d/MMMM/yyyy}}</p>
+     </div>
+
+
+    <div class="card">
+    <p><b>Attachment</b></p>
+    <img src="http://cssent.com/demo/bk/uploads/{{Image}}" ng-click="openModal()" width="100" height="100%"> 
+    </div>
+
+  
+       <label class="item item-input item-select">
+        <div class="input-label">
+          Change Status
+        </div>
+        <select ng-model="statusId">
+       
+        <option>Complete</option>
+    
+       </select>
+       </label>   
+        
+        
+        <br>
+        <button class="button button-block button-positive" type="submit">
+          Submit
+        </button>
+     
+      
+     </form>  
+  </ion-content>
+</ion-view>

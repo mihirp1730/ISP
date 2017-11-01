@@ -1,0 +1,25 @@
+<ion-view view-title="Get Connection Detail" ng-init="GConnectionDetailPage()">
+
+    <ion-nav-bar class="bar-stable">
+    </ion-nav-bar>
+
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_notification()">
+            </button>
+    </ion-nav-buttons>
+
+    <ion-content padding="true">
+
+
+
+        <div ng-repeat="data in getconn">
+            <div class="card">
+                <a class="item">
+                    <p ng-show>{{data.UserId.Id}}</p>
+                    <p>{{data.Name}}</p>
+                    <p>{{data.Email}}</p>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

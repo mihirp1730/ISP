@@ -1,0 +1,103 @@
+<ion-view view-title="Manage Customers" cache-view="false" hide-back-button="true" ng-init="GetUsers()">
+
+    <ion-nav-bar class="bar-stable">
+
+    </ion-nav-bar>
+
+    <ion-nav-buttons side="right">
+
+        <i class="ion-plus" ng-click="add_new_customer()" style="float: right; color:#f8f8f8; width:31px; font-size: 34px;"></i>
+        <!--<button ng-json-export-excel data="dataList" 
+        report-fields="{'uesr.username': '{{data.Name}}', keyjson2: 'Header 2', keyjson3: 'Head 3'}", 
+        filename =" 'export-excel' " 
+        class="css-class">
+          </button>-->
+
+
+        <!-- <button class="button button-icon ion-ios-bell" ng-controller="AppCtrl" ng-click="a_notification()"style="background: transparent;"></button> -->
+
+    </ion-nav-buttons>
+
+
+    <ion-nav-buttons side="left">
+
+        <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_notification()">
+              </button>
+
+    </ion-nav-buttons>
+    <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+        <div class="tabs">
+            <a class="tab-item active" nav-transition="none" href="#customer_list">
+       Customer
+      </a>
+            <a class="tab-item" nav-transition="none" href="#admin_list">
+       Admin
+      </a>
+            <a class="tab-item" nav-transition="none" href="#tech_list">
+       Technician
+      </a>
+            <a class="tab-item" nav-transition="none" href="#vendor_list">
+       Vendor
+      </a>
+        </div>
+    </div>
+
+    <ion-content padding="true" style="color: #000;">
+        <br><br><br>
+        <div ng-repeat="data in userlist">
+            <div class="card" ng-if="data.Role.Name=='User'">
+
+                <p>&nbsp;&nbsp;{{data.Name}}<span style="float: right;"><i class="ion-edit" ng-controller="AdminCtrl" ng-click="profile_client(data.UserId.Id, data.Role.Name)"></i>&nbsp;&nbsp;&nbsp;<i class="ion-trash-a" ng-click="showConfirm(data.UserId.Id)"></i>&nbsp;</span></p>
+                <p>&nbsp;&nbsp;{{data.Email}}</p>
+
+            </div>
+
+        </div>
+
+        <!--ng-show="(data|filter:{selected: true}).length"-->
+
+        <!--<button ng-click="exportData()">Export</button>
+        <br />
+        <div class="card">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody style="border:0pt">
+                    <tr ng-repeat="data in userlist" ng-if="data.Role.Name=='User'">
+                        <td><input type="checkbox" ng-model="data.selected" /></td>
+                        <td>{{data.Name}}</td>
+                        <td>{{data.Email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="exportable" style="display:none">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Strret1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="data in userlist|filter:{selected: true}">
+                            <td>{{data.Name}}</td>
+                            <td>{{data.Email}}</td>
+                            <td>{{data.Street1}}</td>
+                            <td>{{data.Mobile}}</td>>
+                            <td>{{data.Phone}}</td>
+                            <!--<td><span ng-repeat="data in userlist.Terms">{{term}}{{!$last?', ':''}}</span></td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        -->
+
+
+    </ion-content>
+</ion-view>

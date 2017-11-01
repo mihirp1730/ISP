@@ -1,0 +1,54 @@
+ 
+ <ion-view view-title="Manage Plans" cache-view="false" hide-back-button="true" ng-init="GetAllPlans()">
+ 
+       <ion-nav-buttons side="right">
+    
+
+     
+   
+      <i class="ion-plus" ng-click="new_plan()" style="float: right; color:#f8f8f8; width:31px; font-size: 34px;"></i>
+     <!--  <button class="button button-icon ion-ios-bell" ng-controller="AppCtrl" ng-click="a_notification()" style="background: transparent;"></button>
+      --> 
+        
+          </ion-nav-buttons>
+
+    
+         
+     <ion-content padding="true"  style="color: #000;">
+
+
+            <ion-list can-swipe="true">
+                <ion-item ng-repeat="data in service" class="item-thumbnail-left item-text-wrap" style="border-color: transperent; ">
+                    <!--<div class="card">-->
+                        <!--<img src="img/isp.png">-->
+                        <p ng-show="Plan_Id">{{data.Id}}</p>
+                        <p style="height: 20px;">&nbsp;&nbsp;<b>{{data.Name}}</b></p>
+                            <p>&nbsp;&nbsp;{{data.Speed}}</p>
+                            <p>&nbsp;&nbsp;{{data.Duration}}</p>
+                            <p>&nbsp;&nbsp;<b>Price: &#x20B9 {{data.Price}}</b></p>
+                        <ion-option-button class="button-balanced" ng-click="edit_plan(data.Id)" >
+                            Edit Plan
+                        </ion-option-button>
+                        <ion-option-button class="button-assertive" ng-click="Delete_Plan(data.Id)">
+                            Delete
+                        </ion-option-button>
+                        </div>
+                </ion-item>
+            </ion-list>
+     
+      <!--<div ng-repeat="data in service">
+      <div class="card">
+      <p ng-show="Plan_Id">{{data.Id}}</p> 
+      <p>&nbsp;&nbsp;<b>{{data.Name}}</b><span style="float: right;"><i class="ion-edit" ng-click="edit_plan(data.Id)"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-trash-a" ng-click="Delete_Plan(data.Id)"></i>&nbsp;&nbsp;</span></p>
+      <p>&nbsp;&nbsp;{{data.Speed}}</p>
+      <p>&nbsp;&nbsp;{{data.Duration}}</p>
+      <p>&nbsp;&nbsp;<b>Price: &#x20B9 {{data.Price}}</b></p>
+      
+      </div>
+     
+      </div>-->
+
+
+    
+</ion-content>
+</ion-view>

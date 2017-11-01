@@ -1,0 +1,72 @@
+
+
+<!-- style="background: url(img/login.jpg) center; background-size: cover;"  -->
+<ion-view view-title="Log In" cache-view="false" hide-back-button="true" ng-init="GetAllPlans()">
+
+
+<ion-content class="bgy" padding="true" >
+
+<center><h1 style="color:#f8f8f8;">ISP</h1></center>
+<hr>
+
+  <div class="card" ng-repeat="data in service">
+   <a class="item"  ng-click="login()">
+          <button class="button button-balanced" style="min-height: 0px; float: right;">
+          &#x20B9 {{data.Price}}</button>
+         
+          <h3 style="color: #000;">{{data.Name}}</h3>
+         
+          <h4 style="color: #868282;">{{data.Speed}}</h4>
+          <h4 style="color: #868282;">{{data.Duration}}</h4>
+
+          
+         
+          
+          
+          
+        </a>
+    </div>    
+ 
+    
+<!--  <div ng-repeat="data in service" ng-if="$index%2 == 0" class="row colums-two">
+      <div class="card col" ng-click="login()" style="margin: 5px 5px; background-color: #387ef5;">
+        
+      <a class="item">
+          <h3 style="color: #f8f8f8;">{{service[$index].Name}}</h3>
+         
+          <h4 style="color: #f8f8f8;">{{service[$index].Speed}}</h4>
+          <h4 style="color: #f8f8f8;">Per {{service[$index].Duration}}</h4>
+          <hr>
+          
+          <h4 style="color: #f8f8f8;">&#x20B9 {{service[$index].Price}}</h4>
+          
+        </a>
+      </div>
+
+      <div ng-style="{'visibility': !!service[$index + 1] ? 'visible' : 'hidden'}" class="card col" style="margin: 5px 5px; background-color: #387ef5;"
+        ng-click="login()">
+       
+        <a class="item">
+          <h3 style="color: #f8f8f8;">{{service[$index + 1].Name}}</h3>
+         
+          <h4 style="color: #f8f8f8;">{{service[$index + 1].Speed}}</h4>
+          <h4 style="color: #f8f8f8;">Per {{service[$index + 1].Duration}}</h4>
+          <hr>
+          <h4 style="color: #f8f8f8;">&#x20B9 {{service[$index + 1].Price}}</h4>
+         
+        </a>
+      </div>
+   </div> -->
+  
+     
+
+
+
+
+
+
+  
+ 
+  </ion-content>
+</ion-view>
+

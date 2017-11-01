@@ -1,0 +1,75 @@
+
+<ion-view view-title="Log In" cache-view="false" hide-back-button="true" style="background-color: 
+#375c90;">
+
+ <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="homepage()">
+              </button>
+  
+          </ion-nav-buttons>
+
+<ion-content ng-controller="NotificationCtrl" class="bgh" padding="true">
+
+<br>
+
+<div class="list">
+
+<center><h1 style="color:#f8f8f8;">ISP</h1>
+        </center>
+  
+</div> 
+<br><br>
+<form ng-submit="login_role()">
+   
+<label class="item-input item-floating-label">
+<span class="input-label" style="color:#f8f8f8;">Username</span>
+<input type="text" placeholder="Email" ng-model="LoginData.Email" style="border-top-color: transparent; color:#f8f8f8;">
+</label>
+
+<hr>
+
+<label class="item-input item-floating-label">
+<span class="input-label" style="color:#f8f8f8;">Password</span>
+<input type="password" placeholder="Password" ng-model="LoginData.Password" style="color:#f8f8f8;">
+</label>
+
+<hr>
+<br>
+
+
+
+<button class="button button-block button-balanced" type="submit" style="background-color: #0074ce;">
+LOG IN
+</button>
+
+
+
+
+</form>
+<center>
+<button class="button button-clear button-positive" style="color: #f8f8f8;" ng-click="forgot_pass()">
+               Reset Password
+</button>
+</center>
+</div>  
+
+
+  
+
+
+
+
+</div>
+
+  
+ 
+  </ion-content>
+</ion-view>
+
+
+<!-- style="background: url(img/login.jpg) center; background-size: cover;"  -->

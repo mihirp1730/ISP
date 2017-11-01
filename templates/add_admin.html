@@ -1,0 +1,86 @@
+<ion-view title="Add user" hide-back-button="true">
+         <!-- <ion-nav-bar class="bar-stable">
+         </ion-nav-bar> -->
+
+         <!--  <ion-nav-buttons side="left">
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="login()">
+              </button>
+         </ion-nav-buttons> -->
+
+  <ion-content padding="true">
+
+    <form ng-submit="new_admin()">
+
+      <div class="list">
+
+        <h3>Personal Details</h3>
+  
+          <label class="item item-input">
+            <input type="text" placeholder="Username" maxlength="10" data-ng-minLength="1" ng-model="admin.username">
+          </label>
+  
+          <label class="item item-input">
+  	        <input type="password" placeholder="Password" maxlength="18" data-ng-minLength="6" ng-model="admin.password">
+          </label>
+
+          <label class="item item-input">
+  	        <input type="text" placeholder="Name" maxlength="30" data-ng-minLength="1" ng-model="admin.name">
+          </label>
+
+          <!-- <label class="item-input item-floating-label" ng-class="{ 'has-errors' : authorizationForm.password.$invalid  && authorizationForm.$submitted, 'no-errors' : authorizationForm.password.$valid  && authorizationForm.$submitted}">
+              <span class="input-label" style="color: #0074ce">E-mail Address</span>
+              <input type="text" id="textboxid2" name="email" placeholder="Enter Valid E-mail Address" ng-model="user.email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
+          </label>
+
+          <hr>
+   
+          <div class="error-container last-error-container" ng-show="authorizationForm.email.$error && authorizationForm.$submitted" ng-messages="authorizationForm.email.$error">
+            <div ng-messages-include="error-list.html">
+            </div>
+          </div> -->
+
+          <label class="item item-input" >
+  	        <input type="email" placeholder="Email" maxlength="30" data-ng-minLength="1" ng-model="admin.email">
+          </label>
+
+          <label class="item item-input">
+            <input type="tel" placeholder="Phone" ng-model="admin.phone">
+          </label>
+
+          <label class="item item-input">
+            <input type="tel" placeholder="Mobile" ng-model="admin.mobile">
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="Street1" maxlength="80" data-ng-minLength="1" ng-model="admin.address1"> 
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="Street2" maxlength="80" data-ng-minLength="1" ng-model="admin.address2"> 
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="City" maxlength="30" data-ng-minLength="1" ng-model="admin.city">
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="State" maxlength="30" data-ng-minLength="1" ng-model="admin.state">
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="Country" maxlength="30" data-ng-minLength="1" ng-model="admin.country">
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="Zipcode" maxlength="6" data-ng-minLength="6" ng-model="admin.zipcode">
+          </label>
+
+       <br>
+	           <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+  		           ADD
+	           </button>
+	       
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

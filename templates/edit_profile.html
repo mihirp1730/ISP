@@ -1,0 +1,166 @@
+<ion-view title="Edit Customer" hide-back-button="true" ng-init="GetServices()">
+        <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_customer_list()">
+              </button>
+  
+          </ion-nav-buttons>
+
+  <ion-content padding="true">
+
+    <form ng-submit="edit_customer(UserId, UserName, Name, Email, Phone, Mobile, Street1, Street2
+     , City, State, Country, ZipCode, RadiusId, RadiusUsername, RadiusPassword, PlanName,
+      PlanSpeed, PlanPrice, StartDate, EndDate)">
+
+    
+        <h3>Personal Details</h3>
+
+        
+          <p ng-show="u_id">{{UserId}}</p>   
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Username</span>
+          <input type="text" placeholder="Username" maxlength="30" data-ng-minLength="1" ng-model="UserName">
+          </label>
+
+         
+         <label class="item item-input item-stacked-label">
+          <span class="input-label">Name</span>
+  	     <input type="text" placeholder="Name" maxlength="30" data-ng-minLength="1" ng-model="Name">
+        </label>
+
+
+        <!--  <label class="item item-input item-stacked-label">
+          <span class="input-label">Email</span>
+  	     <input type="email" placeholder="Email" maxlength="30" data-ng-minLength="1" ng-model="Email">
+          </label> -->
+          <p ng-show="Email"></p>
+
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Phone</span>
+            <input type="tel" placeholder="Phone" ng-model="Phone">
+          </label>
+
+         <label class="item item-input item-stacked-label">
+          <span class="input-label">Mobile</span>
+            <input type="tel" placeholder="Mobile" ng-model="Mobile">
+          </label>
+
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Street1</span>
+            <input type="text" placeholder="Street1" maxlength="80" data-ng-minLength="1" ng-model="Street1"> 
+          </label>
+
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Street2</span>
+            <input type="text" placeholder="Street2" maxlength="80" data-ng-minLength="1" ng-model="Street2"> 
+          </label>
+
+         <label class="item item-input item-stacked-label">
+         <span class="input-label">City</span>
+         <input type="text" placeholder="City" maxlength="30" data-ng-minLength="1" ng-model="City">
+         </label>
+
+         <label class="item item-input item-stacked-label">
+          <span class="input-label">State</span>
+          <input type="text" placeholder="State" maxlength="30" data-ng-minLength="1" ng-model="State">
+          </label>
+
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Contry</span>
+            <input type="text" placeholder="Country" maxlength="30" data-ng-minLength="1" ng-model="Country">
+          </label>
+
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Zipcode</span>
+            <input type="text" placeholder="Zipcode" maxlength="6" data-ng-minLength="6" ng-model="ZipCode">
+          </label>
+
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Radius UserId</span>
+            <input type="text" placeholder="Radius UserId" maxlength="10" data-ng-minLength="1" ng-model="RadiusId">
+          </label>
+
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Radius UserName</span>
+            <input type="text" placeholder="Radius UserName" maxlength="10" data-ng-minLength="1" ng-model="RadiusUsername">
+          </label>
+  
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Radius Password</span>
+  	         <input type="text" placeholder="Radius password" maxlength="18" data-ng-minLength="6" ng-model="RadiusPassword">
+          </label>
+
+
+         <!--  <label class="item item-input item-select">
+            <div class="input-label">
+              User Role
+            </div>
+            <select ng-model="UserRole"> -->
+              <!-- <option>Select Service</option>
+              <option ng-repeat="data in role">{{data.Name}}</option>
+             
+            </select>
+          </label> -->
+  	   
+          <h3>Service Details</h3>
+ 
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Services name
+            </div>
+            <select ng-model="PlanName" ng-change="onplanselect(user.Data.PlanName)">
+              <!-- <option>Select Service</option> -->
+              <option ng-repeat="data in service">{{data.Name}}</option>
+        
+            </select>
+           </label>
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Speed
+            </div>
+            <select ng-model="PlanSpeed">
+               <!-- <option>Select Speed</option> -->
+               <option ng-repeat="data in service">{{data.Speed}}</option>
+              
+            </select>
+          </label>
+
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Price
+            </div>
+            <select ng-model="PlanPrice">
+              <!-- <option>Select Price</option> -->
+             <option ng-repeat="data in service">{{data.Price}}</option>
+            </select>
+          </label>
+
+
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Start Date</span>
+             <input type="text" ng-model="StartDate">
+          </label>
+
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">End Date</span>
+             <input type="text" ng-model="EndDate">
+          </label>
+
+
+
+
+	       
+	           <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+  		           ADD
+	           </button>
+	       
+  
+    </form>
+  </ion-content>
+</ion-view>

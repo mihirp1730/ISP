@@ -1,0 +1,88 @@
+ 
+ <ion-view view-title="Manage Complains" cache-view="false" hide-back-button="true" ng-init="InProgress()">
+ 
+  <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_notification()">
+              </button>
+  
+          </ion-nav-buttons>
+
+          <ion-nav-buttons side="Right">
+          <button ng-click="exportData()" >Export</button>
+                <br />
+                    <div id="exportable" style="display:none">
+                        <table width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Category Name</th>
+                                    <th>Description</th>
+                                    <th>File Name</th>
+                                    <th>Complain Date</th>
+                                    <th>Street1</th>
+                                    <th>Street2</th>
+                                    <th>City</th>
+                                    <th>ZipCode</th>
+                                    <!--<th>Mobile</th>
+                                    <th>Phone</th>-->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="data in InprogressComplains">
+                                    <td>{{data.UserId.ContactId.Name}}</td>
+                                    <td>{{data.CategoryId.Name}}</td>
+                                    <td>{{data.Description}}</td>
+                                    <td>{{data.FileId.Name}}</td>
+                                    <td>{{data.Date}}</td>
+                                    <td>{{data.UserId.AddressId.Street1}}</td>
+                                    <td>{{data.UserId.AddressId.Street2}}</td>
+                                    <td>{{data.UserId.AddressId.City}}</td>
+                                    <td>{{data.UserId.AddressId.ZipCode}}</td>
+                                    <!--<td>{{data.UserId.ContactId.Mobile}}</td>
+                                    <td>{{data.UserId.ContactId.Phone}}</td>-->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </ion-nav-buttons>              
+
+
+<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item" nav-transition="none" href="#pending_complain">
+       Pending
+      </a>
+      <a class="tab-item active" nav-transition="none" href="#inprogress_complain">
+       InProgress
+      </a>
+      <a class="tab-item" nav-transition="none" href="#complete_complain">
+       Completed
+      </a>
+      <a class="tab-item" nav-transition="none" href="#final_complete_complain">
+       Final Complete
+      </a>
+    </div>
+</div>      
+         
+     <ion-content padding="true" style="color: #000;">
+      <br><br><br>
+      
+     
+
+      <div ng-show="records">
+      <a class="item"  ng-repeat="data in InprogressComplains" ng-click="P_ComplainDetail(data.Id)">
+        {{data.UserId.ContactId.Name}}<br>
+        {{data.Description}}<span ng-show="comp_id">{{data.Id}}</span>
+       </a>
+      </div> 
+     <center><p style="color:red;" ng-show="error">No Complain Found</p></center>
+   
+    
+
+    </ion-content>
+</ion-view>

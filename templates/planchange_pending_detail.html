@@ -1,0 +1,67 @@
+<ion-view view-title="Detail" ng-init="LoadPlanchangePendingDetail()">
+
+
+ <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_notification()">
+              </button>
+  
+          </ion-nav-buttons>
+  <ion-content padding="true">
+
+  
+  <div ng-repeat="data in ChangeListDetail">
+
+  <p ng-show="Idd">{{data.Id}}</p>
+
+
+  <div class="card">
+   <p><b>Customer Contact Detail</b></p>
+    <p>{{data.UserId.ContactId.Name}}</p>
+    <p>Email: {{data.UserId.ContactId.Email}}</p>
+    <p>Mobile: {{data.UserId.ContactId.Mobile}}</p>
+  </div>
+
+  <div class="card">
+   <p><b>Address Details</b></p>
+    <p>{{data.UserId.AddressId.Street1}}, {{data.UserId.AddressId.Street2}}</p>
+    <p>{{data.UserId.AddressId.City}}-{{data.UserId.AddressId.ZipCode}}</p>
+   </div> 
+
+  <div class="card">
+   <p><b>Requested Plan Details</b></p>
+   <p>Name: {{data.PlanId.Name}}</p>
+   <p>Speed: {{data.PlanId.Speed}}</p>
+   <p>Duration: {{data.PlanId.Duration}}</p>
+   <p>Price: {{data.PlanId.Price}}</p>
+  </div>
+
+    <label class="item item-input" ng-show="begindate">
+             <ion-label>Start Date</ion-label>
+                <input type="date" placeholder="Start Date" ng-model="StartDate">
+             </ion-item>
+    </label>
+
+    <label class="item item-input" ng-show="stopdate">
+             <ion-label>End Date</ion-label>
+                <input type="date" placeholder="End Date" ng-model="EndDate">
+             </ion-item>
+    </label>
+
+  
+  <button class="button button-block button-positive" ng-hide="btnshow" ng-click="HideInputs()" style="background-color: #0074ce;">
+    Confirm
+  </button>
+   
+  <button class="button button-block button-positive" ng-show="btnshow1" ng-click="Update_UserPlan(data.Id, StartDate, EndDate)" style="background-color: #0074ce;">
+    Confirm
+  </button>
+  
+ 
+  
+  </ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+<ion-view view-title="Product">
+  <ion-content padding="true">
+ 
+    <form ng-submit="Add_product()">
+ 	      <label class="item item-input">
+  		    <input type="text" placeholder="Product Name" maxlength="30" data-ng-minLength="1" ng-model="product.Data.Name">
+  	    </label>
+
+  	    <label class="item item-input">
+  		    <input type="text" placeholder="Unit of Measure" maxlength="30" data-ng-minLength="1" ng-model="product.Data.UnitOfMeasure">
+  	    </label>
+ 	
+  	    <br>
+  	     <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+  		    Submit
+	       </button>
+	     
+    </form>
+  </ion-content>
+</ion-view>

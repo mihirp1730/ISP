@@ -1,0 +1,44 @@
+<ion-view view-title="Complain" ng-init="GetComplainDropDown()">
+    <ion-content padding="true">
+
+        <form ng-submit="complain(name)">
+
+            <label class="item item-input item-select">
+              <div class="input-label">
+                Category
+              </div>
+              <select ng-model="name" ng-options="data.Name for data in catagory">
+              </select>
+            </label>
+
+            <label class="item item-input item-floating-label">
+              <span class="input-label" style="color: #0074ce;">Description</span>
+              <textarea placeholder="Description" ng-model="ComplainData.Description" style="margin-left: 0px;">
+              </textarea>
+            </label>
+            <br>
+            <a class="button" ng-click="selectPicture()" style="background-color: #b2b2b2;">Add Attachment</a>
+            <div ng-show="asss">{{picData}}</div>
+            <br>
+            <div id="demo" style="margin-left: 28px;"></div>
+            <br>
+
+            <!--   <ion-list ng-click="img_select()" >
+         <input type="file" id="complain-files" multiple>
+          </ion-list> -->
+
+            <!--    <label class="item item-input item-select">
+        <div class="input-label">
+        Status
+        </div>
+        <select ng-model="statusname" ng-options="data.Name for data in status">
+       </select>
+       </label> -->
+            <center>
+                <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;  width:96%;">
+  		    Submit
+	       </button>
+            </center>
+        </form>
+    </ion-content>
+</ion-view>

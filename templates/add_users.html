@@ -1,0 +1,102 @@
+<ion-view title="Add Users" hide-back-button="true">
+        <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="goBack()">
+              </button>
+  
+          </ion-nav-buttons>
+
+  <ion-content padding="true">
+
+    <form ng-submit="new_customer1()">
+
+      <div class="list">
+
+        <h3>Personal Details</h3>
+  
+          <label class="item item-input">
+            <input type="text" placeholder="Username" maxlength="20" data-ng-minLength="1" ng-model="user.Data.Username">
+          </label>
+  
+          <label class="item item-input">
+            <input type="password" placeholder="Password" maxlength="18" data-ng-minLength="6" ng-model="user.Data.Password">
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="Name" maxlength="30" data-ng-minLength="1" ng-model="user.Data.ContactId.Name">
+          </label>
+
+          <label class="item item-input" >
+            <input type="email" placeholder="Email" maxlength="30" data-ng-minLength="1" ng-model="user.Data.ContactId.Email">
+          </label>
+
+          <label class="item item-input">
+            <input type="tel" placeholder="Phone" ng-model="user.Data.ContactId.Phone">
+          </label>
+
+          <label class="item item-input">
+            <input type="tel" placeholder="Mobile" ng-model="user.Data.ContactId.Mobile">
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="Street1" maxlength="80" data-ng-minLength="1" ng-model="user.Data.AddressId.Street1"> 
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="Street2" maxlength="80" data-ng-minLength="1" ng-model="user.Data.AddressId.Street2"> 
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="City" maxlength="30" data-ng-minLength="1" ng-model="user.Data.AddressId.City">
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="State" maxlength="30" data-ng-minLength="1" ng-model="user.Data.AddressId.State">
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="Country" maxlength="30" data-ng-minLength="1" ng-model="user.Data.AddressId.Country">
+          </label>
+
+          <label class="item item-input">
+            <input type="text" placeholder="Zipcode" maxlength="6" data-ng-minLength="6" ng-model="user.Data.AddressId.ZipCode">
+          </label>
+
+            <label class="item item-input">
+             <ion-label>Birth Date</ion-label>
+                <input type="date" placeholder="Birth Date" ng-model="user.Data.ContactId.BirthDate">
+             </ion-item>
+          </label>
+
+        
+
+
+          <label class="item item-input item-select">
+          <div class="input-label">
+          User Role
+          </div>
+          <select ng-model="user.Data.UserRole.Name">
+            <option>Admin</option>
+            <option>Vendor</option>
+            <option>Technician</option>
+           
+          </select>
+        </label>
+       
+        
+
+           <br>
+          
+             <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+                 ADD
+             </button>
+        
+  
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

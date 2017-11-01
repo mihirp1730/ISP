@@ -1,0 +1,59 @@
+<ion-view view-title="Edit Plan">
+
+
+ <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_list_plan()">
+              </button>
+  
+          </ion-nav-buttons>
+  <ion-content padding="true">
+
+    <form ng-submit="save_edit_plan(Id, PlanName, Speed, Duration, Price, RadiusId)">
+
+       
+  	   
+
+          <p ng-show="p_id">{{Id}}</p>  
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Plan Name</span>
+          <input type="text" placeholder="Plan Name" maxlength="30" data-ng-minLength="1" ng-model="PlanName">
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Speed</span>
+          <input type="text" placeholder="Speed" maxlength="20" data-ng-minLength="1" ng-model="Speed">
+        </label>
+
+
+       <label class="item item-input item-stacked-label">
+          <span class="input-label">Duration</span>
+          <input type="text" placeholder="Duration" maxlength="20" data-ng-minLength="1" ng-model="Duration">
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Price</span>
+          <input type="number" placeholder="Price" maxlength="10" data-ng-minLength="1" ng-model="Price">
+        </label>
+
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Radius Plan Id</span>
+          <input type="number" placeholder="Radius Plan Id" maxlength="8" data-ng-minLength="1" ng-model="RadiusId">
+        </label>
+
+      
+        
+      
+       <br>
+  	     <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+  		     Submit
+	       </button>
+	     
+    </form>
+  </ion-content>
+</ion-view>

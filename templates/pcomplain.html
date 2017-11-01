@@ -1,0 +1,23 @@
+<ion-view view-title="Pending Complain" ng-init="PComplainDetailPage()">
+
+
+    <ion-nav-bar class="bar-stable">
+    </ion-nav-bar>
+
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_notification()">
+            </button>
+    </ion-nav-buttons>
+
+    <ion-content padding="true">
+        <div ng-repeat="data in pc">
+            <div class="card">
+                <a class="item">
+                    <p ng-show>{{data.UserId.Id}}</p>
+                    <p>{{data.UserId.ContactId.Name}}</p>
+                    <p>{{data.UserId.ContactId.Email}}</p>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

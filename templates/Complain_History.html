@@ -1,0 +1,29 @@
+<ion-view view-title="Dash Board">
+  <ion-content padding="true">
+
+  <div class="list">
+
+  <div class="item item-divider">
+  Complains
+  </div>
+
+  <a class="item"  ng-repeat="data in ComplainList" ng-click="ComplainDetail(data.Id)">
+  New Complain from {{data.UserId.ContactId.Name}}
+  <p ng-show="Complain_id">{{data.Id}}</p> 
+  </a>
+
+   <div class="item item-divider">
+    Payment
+  
+  </div>
+
+  <a class="item"  ng-repeat="data in ComplainList" ng-click="ComplainDetail(data.Id)">
+    New Complain from {{data.UserId.ContactId.Name}}
+    <p ng-show="Complain_id">{{data.Id}}</p> 
+  </a>
+
+
+  
+</div>
+  </ion-content>
+</ion-view>

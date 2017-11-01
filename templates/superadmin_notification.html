@@ -1,0 +1,121 @@
+<ion-view view-title="Dash Board" hide-back-button="true" ng-init="StartLoading()">
+    <ion-content padding="true">
+
+
+        <div class="item item-divider" style="background-color: #debaba">
+            Complains
+        </div>
+
+        <div class="card" style="background-color: #a06666; -webkit-text-fill-color: aliceblue;">
+            <a class="item" ng-click="PComplainDetail(data)">
+                <b>{{PendingComplaincount.Total}}</b> &nbsp;&nbsp; Pending Complains</a>
+            <!-- <p ng-show="Complain_id">{{data.Id}}</p> -->
+        </div>
+
+        <div class="card" style="background-color: #a06666; -webkit-text-fill-color: aliceblue;">
+            <a class="item" ng-click="CComplainDetail(data)">
+                <b>{{CompletedComplaincount.Total}}</b> &nbsp;&nbsp; Completed Complains</a>
+            <!-- <p ng-show="Complain_id">{{data.Id}}</p> -->
+        </div>
+
+        <div class="card" style="background-color: #a06666; -webkit-text-fill-color: aliceblue;">
+            <a class="item" ng-click="FCComplainDetail(data)">
+                <b>{{FinalComplaincount.Total}}</b> &nbsp;&nbsp; Final Completed Complains</a>
+            <!-- <p ng-show="Complain_id">{{data.Id}}</p> -->
+        </div>
+
+        <div class="item item-divider" style="background-color: #debaba">
+            Payment
+        </div>
+
+        <div class="card" style="background-color: #a06666; -webkit-text-fill-color: aliceblue;">
+            <a class="item" ng-click="DPaymentnDetail(data)">
+                <b>{{DuePaymentcount.Total}}</b> &nbsp;&nbsp; Due Payment</a>
+            <!-- <p ng-show="Complain_id">{{data.Id}}</p> -->
+        </div>
+
+        <div class="card" style="background-color: #a06666; -webkit-text-fill-color: aliceblue;">
+            <a class="item" ng-click="PPaymentnDetail(data)">
+                <b>{{PaidPaymentcount.Total}}</b> &nbsp;&nbsp; Paid Payment</a>
+            <!-- <p ng-show="Complain_id">{{data.Id}}</p> -->
+        </div>
+
+        <div class="card" style="background-color: #a06666; -webkit-text-fill-color: aliceblue;">
+            <a class="item" ng-click="ODPaymentnDetail(data)">
+                <b>{{OverDuePaymentcount.Total}}</b> &nbsp;&nbsp; Overdue Payment</a>
+            <!-- <p ng-show="Complain_id">{{data.Id}}</p> -->
+        </div>
+
+        <div class="item item-divider" style="background-color: #debaba">
+            Connection
+        </div>
+
+        <div class="card" style="background-color: #a06666; -webkit-text-fill-color: aliceblue;">
+            <a class="item" ng-click="NConnectionDetail(data)">
+                <b>{{NewConnectioncount.Total}}</b> &nbsp;&nbsp; New Connections</a>
+        </div>
+
+        <div class="card" style="background-color: #a06666; -webkit-text-fill-color: aliceblue;">
+            <a class="item" ng-click="CConnectionDetail(data)">
+                <b>{{CutConnectioncount.Total}}</b> &nbsp;&nbsp; Cut Connections</a>
+        </div>
+
+        <div class="card" style="background-color: #a06666; -webkit-text-fill-color: aliceblue;">
+            <a class="item" ng-click="GConnectionDetail(data)">
+                <b>{{TotalConnectioncount.Total}}</b> &nbsp;&nbsp; Total Connections</a>
+        </div>
+
+        <!--<div class="card">
+            <a class="item" ng-click="PaymentDetail(data.Id)">
+                <b>{{OverDuePaymentcount.Total}}</b> &nbsp;&nbsp; Overdue Payment</a>
+            <!-- <p ng-show="Complain_id">{{data.Id}}</p> --
+        </div>-->
+
+
+
+        <!--<div class="card">
+            <a class="item" ng-repeat="data in ComplainList"></a>
+            Today's New Complains &nbsp;&nbsp;{{data.UserId.ContactId.Name}}
+             <p ng-show="Complain_id">{{data.Id}}</p> 
+        </div>
+
+        <div class="card">
+            <a class="item" ng-repeat="data in ComplainList">
+              Today's New Complains &nbsp;&nbsp;{{data.UserId.ContactId.Name}}</a>
+            <!-- <p ng-show="Complain_id">{{data.Id}}</p> 
+        </div>
+
+
+        <center>
+            <p ng-show="ComplainError" style="color:red;">You have no new notification</p>
+        </center>
+
+
+
+        <a class="item" ng-repeat="data in ComplainList" ng-click="ComplainDetail(data.Id)">
+    New Complain from {{data.UserId.ContactId.Name}}
+    <p ng-show="Complain_id">{{data.Id}}</p> 
+  </a>
+
+        <div ng-show="PaymentRecords" class="item item-divider">
+            Payment
+        </div>
+
+        <a class="item" ng-repeat="data in PaymentList" ng-click="PaymentDetail(data.Id)">
+    Payment done from {{data.InvoiceId.UserId.ContactId.Name}}
+    <p ng-show="Complain_id">{{data.Id}}</p> 
+  </a>
+
+        <div ng-show="PlanChange" class="item item-divider">
+            Plan Change
+        </div>
+
+        <a class="item" ng-repeat="data in ChangeList" ng-click="PlanchangeDetail(data.Id)">
+    New Request From {{data.UserId.ContactId.Name}}
+    <p ng-show="dds">{{data.Id}}</p>
+  </a>-->
+
+
+
+    </ion-content>
+</ion-view>

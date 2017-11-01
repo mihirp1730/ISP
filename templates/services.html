@@ -1,0 +1,29 @@
+ 
+ <ion-view view-title="Available Plans" cache-view="false" hide-back-button="true" ng-init="GetAllPlans()">
+ 
+      
+         
+     <ion-content padding="true"  style="color: #f8f8f8;">
+     
+      <div class="card" ng-repeat="data in service">
+       <a class="item"  ng-click="ChangePlanUser(data.Id)">
+          <button class="button button-balanced" style="min-height: 0px; float: right;">
+          &#x20B9 {{data.Price}}</button>
+          <p ng-show="Plan_Id">{{data.Id}}</p> 
+          <h3 style="color: #000;">{{data.Name}}</h3>
+         
+          <h4 style="color: #868282;">{{data.Speed}}</h4>
+          <h4 style="color: #868282;">{{data.Duration}}</h4>
+
+          
+         
+          
+          
+          
+        </a>
+    </div>    
+ 
+
+    
+   </ion-content>
+</ion-view>

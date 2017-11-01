@@ -1,0 +1,74 @@
+<ion-view view-title="Admin Inward" ng-init="subtotal()" hide-back-button="true">
+
+
+ <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_inward()">
+              </button>
+  
+          </ion-nav-buttons>
+  <ion-content padding="true">
+
+<div ng-if="InwardItmesInCart==='true'">
+
+ <form ng-submit="CheckOut()">
+
+      <p style="color:#000;">From: {{Vendr_name}}</p>
+
+      <br> 
+      <p><b>Items</b></p>    
+
+      <div ng-repeat="thing in things">
+       
+      <ul class="list"> 
+
+      <li class="item" style="border-bottom-color:rgba(229, 229, 229, 0.66);">
+
+      <p style="color:#000;">{{thing.VariantName}}&nbsp;{{thing.ProductName}}
+
+      <span style="float: right;"><i class="ion-close" ng-click="RemoveItem($index)"></i></span></p>
+
+      <p style="color:#000;">Qty:{{thing.Quantity}}</p>
+
+      <p style="color:#000;">Amount:{{thing.Amount}}</p>
+
+  
+         
+     
+
+      </li>
+
+      </ul>
+
+      </div>   
+      <hr>
+    <br>
+
+     <p style="color:#000;">
+
+     <span style="color:#262a2b;">&nbsp;Cart Subtotal:</span> Rs.{{Total_amount}}<br><br>
+     <span style="color:#262a2b;">&nbsp;Total Tax:</span> Rs.{{Total_tax}}<br>
+     <hr><br>
+      <b>&nbsp;Total Amount:</b> Rs.{{Total_tax+Total_amount}} 
+     </p>
+
+   
+       <br>
+        
+         <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+          Proceed To CheckOut
+         </button>
+
+       
+    </form>
+  </div>
+
+  <center><p ng-if="InwardItmesInCart==='false'" style="color: red;">No Items In Your Cart</p></center>    
+  
+           
+  </ion-content>
+</ion-view>

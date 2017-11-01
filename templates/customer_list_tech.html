@@ -1,0 +1,20 @@
+ 
+ <ion-view view-title="Customers" cache-view="false" hide-back-button="true" ng-init="GetAllCustomers()">
+ 
+
+
+         
+     <ion-content padding="true"  style="color: #000;">
+     
+      <div ng-repeat="data in users"> 
+      <div class="card" ng-if="data.Role.Name=='User'">
+
+      <p>&nbsp;&nbsp;{{data.Name}}<span style="float: right;"><button class="button icon-left ion-plus button-positive" ng-click="add_outward(data.Name, data.Email)">Outward</button></span></p>
+      <p>&nbsp;&nbsp;{{data.Email}}</p>
+      
+      </div>
+
+     </div>
+
+    </ion-content>
+</ion-view>

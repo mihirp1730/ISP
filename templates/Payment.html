@@ -1,0 +1,49 @@
+<ion-view title="Payment" hide-back-button="true">
+        <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="goBack_Dashboard()">
+              </button>
+  
+          </ion-nav-buttons>
+
+  <ion-content padding="true">
+
+    <form ng-submit="Pay(trans_type, Amount, Price)">
+
+      <div class="list">
+
+          <label class="item item-input item-select">
+          <div class="input-label">
+           Transaction Type
+          </div>
+          <select ng-model="trans_type">
+            <!-- <option>Select Product</option> -->
+            <option>Cash</option>
+            <option>Online</option>
+            
+          </select>
+        </label>
+
+        <p ng-show="cvv">{{Price}}</p>
+  
+          <label class="item item-input">
+            <input type="number" placeholder="Enter Amount" maxlength="10" data-ng-minLength="1" ng-model="Amount">
+          </label>
+          <br>
+          <br>
+          <p style="font-size: 14px; color:#444; margin-left: 12px;">If you choose online as transaction type then pay through paytm on +919033540113</p>
+           <br>
+           <center> 
+          <button class="button button-block button-positive" type="submit" style="background-color: #0074ce; width:96%;">
+                 PAY
+          </button>
+           </center>
+  
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

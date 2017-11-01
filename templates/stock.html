@@ -1,0 +1,37 @@
+<ion-view view-title="Admin Inward" hide-back-button="true" ng-init="GetVendors()">
+
+   <ion-nav-buttons side="right">
+   
+      <i class="icon ion-ios-cart-outline" ng-click="cart()" style="float: right; color:#f8f8f8; width:31px; font-size: 34px;"></i>
+     
+        
+    </ion-nav-buttons>
+
+  <ion-content padding="true">
+
+    <form ng-submit="Next_Inward(invoice_number)">
+    
+       <label class="item item-input item-select">
+       <div class="input-label">
+          Vendor Name
+        </div>
+        <select ng-model="Inward.Vendor.UserId.Id" ng-options="data.Name for data in vendor">
+       </select>
+       </label>
+
+        <label class="item item-input">
+          <input type="number" placeholder="Invoice Number" maxlength="8" data-ng-minLength="1" ng-model="invoice_number">
+        </label>
+        
+     
+     
+        
+      
+       
+         <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+           Next
+         </button>
+       
+    </form>
+  </ion-content>
+</ion-view>

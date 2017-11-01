@@ -1,0 +1,25 @@
+<ion-view view-title="Dash Board" hide-back-button="true" ng-init="GetAssignComplains()">
+  <ion-content padding="true">
+
+<div class="list">
+
+ <div ng-show="assign_complain" class="item item-divider">
+    Complains
+  
+  </div>
+
+   <center>
+    <p ng-show="ComplainError" style="color:red;">You have no new notification</p>
+   </center>
+
+  <a class="item"  ng-repeat="data in ComplainAssignList" ng-click="ComplainDetail1(data.Id)">
+    New Complain from {{data.ComplainId.UserId.ContactId.Name}}
+    <p ng-show="Complain_id">{{data.Id}}</p> 
+  </a>
+
+ 
+
+</div>  
+  
+  </ion-content>
+</ion-view>

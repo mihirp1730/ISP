@@ -1,0 +1,67 @@
+<ion-view view-title="Complain" ng-init="ComplainDetailPage()">
+
+
+    <ion-nav-bar class="bar-stable">
+
+    </ion-nav-bar>
+
+    <ion-nav-buttons side="left">
+
+        <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_notification()">
+              </button>
+
+    </ion-nav-buttons>
+    <ion-content padding="true">
+        <p>{{ComplainId}}</p>
+        <form ng-submit="Assign_Complain(ComplainId, techId)">
+            <p ng-show="sss">{{ComplainId}}</p>
+            <div class="card">
+                <p><b>Customer Name</b></p>
+                <p>{{CustomerName}}</p>
+            </div>
+
+            <div class="card">
+                <p><b>Customer Address</b></p>
+                <p>{{Street1}}, {{Street2}}</p>
+                <p>{{City}}-{{ZipCode}}</p>
+            </div>
+
+            <div class="card">
+                <p><b>Category</b></p>
+                <p>{{Category}}</p>
+            </div>
+
+            <div class="card">
+                <p><b>Description</b></p>
+                <p>{{Description}}</p>
+            </div>
+
+            <div class="card">
+                <p><b>Complain Register Date</b></p>
+                <p>{{RegisterDate | date : d/MMMM/yyyy}}</p>
+            </div>
+
+
+            <div class="card" ng-hide="ImgTag">
+                <p><b>Attachment</b></p>
+                <img src="http://cssent.com/demo/bk/uploads/{{Image}}" ng-click="openModal()" width="100" height="100%">
+            </div>
+
+            <label class="item item-input item-select">
+                <div class="input-label">
+                  Assign To
+                </div>
+                <select ng-model="techId" ng-options="data.Name for data in technicians">
+                </select>
+            </label>
+
+
+
+            <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+              Submit
+            </button>
+
+
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view view-title="InProgress Complain" ng-init="GetInProgressComplains()">
+  <ion-content>
+ 
+   <br>
+ 
+    
+     <div ng-repeat="data in ViewComplainstech" ng-show="records">
+     <a class="item"  ng-repeat="data in ViewComplainstech" ng-click="I_ComplainDetail(data.ComplainId.Id)">
+     <p ng-show="Complain_id">{{data.ComplainId.Id}}</p>
+     <p style="color:#000;">{{data.ComplainId.CategoryId.Name}}</p>
+     <p style="color:rgba(68, 68, 68, 0.84);">{{data.ComplainId.Description}}</p>
+     <p style="color:rgba(68, 68, 68, 0.84);">Assign Date: {{data.AssignedDate | date : d/MMMM/yyyy}}</p>
+    
+     </a>
+     
+      </div>
+
+      <center><p style="color:red;" ng-show="error">No Complain Found</p></center>
+     
+  </ion-content>
+</ion-view>

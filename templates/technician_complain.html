@@ -1,0 +1,52 @@
+<ion-view view-title="Technician Complain">
+  <ion-content padding="true">
+ 
+    <form ng-submit="techcomplain()">
+
+
+        <div class="card">
+          <p>&nbsp;&nbsp;Ronni Desouza</p>
+          <p>&nbsp;&nbsp;A-123, Fenni Street</p>
+          <p>&nbsp;&nbsp;Anand-388001</p>
+          <p>&nbsp;&nbsp;Assets</p>
+          <p>&nbsp;&nbsp;Due to heavy wind device break down</p>
+          <center><img width="300" height="100" src="img/3.jpeg"></center>
+          <p>&nbsp;&nbsp;Assets</p>
+          <p>&nbsp;&nbsp;it is urgent so do it first</p>
+        </div>
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Forward to
+          </div>
+          <select ng-model="techcomplain.frwd">
+            <!-- <option>Select Product</option> -->
+            <option>Tech 1</option>
+            <option>Tech 2</option>
+            <option>Tech 3</option>
+            <option>Tech 4</option>
+          </select>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Assign Date</span>
+          <input type="date" ng-model="techcomplain.assigndate">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Close Date</span>
+          <input type="date" ng-model="techcomplain.closedate">
+        </label>
+
+        <label class="item item-input">
+          <input type="text" placeholder="Status" maxlength="10" data-ng-minLength="1" ng-model="techcomplain.status">
+        </label>
+
+        <label class="item">
+         <button class="button button-block button-positive" type="submit" style="background-color: #444444;">
+          Submit
+         </button>
+        </label>
+    </form>
+  </ion-content>
+</ion-view>

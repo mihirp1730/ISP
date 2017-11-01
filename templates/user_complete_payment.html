@@ -1,0 +1,54 @@
+ 
+ <ion-view view-title="Payment Details" cache-view="false" hide-back-button="true" ng-init="GetCompleteUserPayment()">
+ 
+<ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_notification()">
+              </button>
+  
+          </ion-nav-buttons>
+
+
+<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item" nav-transition="none" href="#user_pending_payment">
+       Pending
+      </a>
+      <a class="tab-item active" nav-transition="none" href="#user_complete_payment">
+      Complete
+      </a>
+    </div>
+</div>      
+         
+     <ion-content padding="true" style="color: #000;">
+      <br><br><br>
+      
+   <div ng-show="CompleteData"> 
+     <div ng-repeat="data in CompleteUserPayment">
+     
+     
+       
+      <ul class="list"> 
+
+      <li class="item"  style="border-bottom-color:rgba(229, 229, 229, 0.66);">
+      <p style="color:#000;">Order Number {{data.PaymentRefNumber}}
+      <span style="float: right;">&#x20B9 {{data.AmountPaid}}</span></p>
+      <p style="color:rgba(68, 68, 68, 0.84);">{{data.CreatedOn | date : d/MMMM/yyyy}}
+      <span style="float: right; color:#000;">{{data.PaymentType}}</span></p>
+      <p style="color:#000;">For {{data.InvoiceId.PlanId.Name}}</p>
+      <p style="color:rgba(68, 68, 68, 0.84);">{{data.InvoiceId.PlanId.Speed}} For {{data.InvoiceId.PlanId.Duration}}</p>
+
+      </li>
+
+      </ul>
+
+      </div>
+   </div>
+   
+      <center><p style="color:red;" ng-show="error">No Records Found</p></center>
+    </ion-content>
+</ion-view>

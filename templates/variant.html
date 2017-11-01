@@ -1,0 +1,46 @@
+<ion-view view-title="Variant" ng-init="GetProducts_GetServices()">
+  <ion-content padding="true">
+   
+  	<form ng-submit="Add_variant()">
+      
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Product
+        </div>
+        <select ng-model="Variant.Data.ProductId" ng-options="data.Name for data in product">
+       </select>
+       </label>
+      
+
+      <label class="item item-input">
+  		<input type="text" placeholder="Variant Name" maxlength="30" data-ng-minLength="1" ng-model="Variant.Data.Name">
+  	  </label>
+
+ <!--    <span class="item item-checkbox checkbox-assertive">
+         Is Plan Specific? 
+    <label class="checkbox" style="width:10%;">
+         <input type="checkbox" ng-model="chacked" ng-change="isChacked(chacked)">
+    </label>
+    </span>
+ 
+    <div ng-show="showplan">
+    <label class="item item-input item-select">
+    <div class="input-label">
+    Service Name
+    </div>
+    <select ng-model="Variant.Data.PlanId" ng-options="data.Name for data in service">
+    </select>
+   </label>
+    </div>
+   -->
+
+      <br>
+   
+        <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+  		    Submit
+	      </button>
+	   
+    </form>
+    
+  </ion-content>
+</ion-view>

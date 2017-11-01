@@ -1,0 +1,70 @@
+<ion-view view-title="Payment Detail" ng-init="GetPaymentDetails()">
+
+
+ <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_notification()">
+              </button>
+  
+          </ion-nav-buttons>
+  <ion-content padding="true">
+
+  
+  <div ng-repeat="data in PayDetail">
+  <p ng-show="Payment_id">{{data.Id}}</p>
+  <div class="card">
+   <p><b>Customer Name</b></p>
+    <p>{{data.InvoiceId.UserId.ContactId.Name}}</p>
+  </div>
+
+  <div class="card">
+   <p><b>Address Details</b></p>
+    <p>{{data.InvoiceId.UserId.AddressId.Street1}}, {{data.InvoiceId.UserId.AddressId.Street2}}</p>
+    <p>{{data.InvoiceId.UserId.AddressId.City}}-{{data.InvoiceId.UserId.AddressId.ZipCode}}</p>
+   </div> 
+
+  <div class="card">
+   <p><b>Contact Details</b></p>
+   <p>Email: {{data.InvoiceId.UserId.ContactId.Email}}</p>
+   <p>PH: {{data.InvoiceId.UserId.ContactId.Phone}}</p>
+   <p>Mobile: {{data.InvoiceId.UserId.ContactId.Mobile}}</p>
+  </div>
+
+  <div class="card">
+   <p><b>Plan Details</b></p>
+   <p>Name: {{data.InvoiceId.PlanId.Name}}</p>
+   <p>Speed: {{data.InvoiceId.PlanId.Speed}}</p>
+   <p>Duration: {{data.InvoiceId.PlanId.Duration}}</p>
+   <p>Start Date: {{data.InvoiceId.PlanId.StartDate}}</p>
+   <p>End Date: {{data.InvoiceId.PlanId.EndDate}}</p>
+   <p>Price: {{data.InvoiceId.PlanId.Price}}</p>
+  </div>
+
+  <div class="card">
+   <p><b>Payment Details</b></p>
+   <p>Payment Mode: {{data.PaymentType}}</p>
+   <p>Payment Reference No. : {{data.PaymentRefNumber}}</p>
+   <p>Total Amount: Rs {{data.InvoiceId.PlanId.Price}}</p>
+   <p>Paid Amount: Rs {{data.AmountPaid}}</p>
+  </div>
+
+  <div class="card">
+  <p><b>Payment Status</b></p>
+  <span style="color:red;" ng-show="paymet_pending">Pending</span>
+  <span style="color:green;" ng-show="paymet_received">Received</span>
+  </div>
+
+  
+  <div ng-show="TapButton">
+  <button class="button button-block button-positive" ng-click="Update_Payment_Status(data.Id)" style="background-color: #0074ce;">
+    Tap Here When Payment Is Received
+  </button>
+  </div>
+ 
+  
+  </ion-content>
+</ion-view>

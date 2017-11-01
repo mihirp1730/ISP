@@ -1,0 +1,27 @@
+<ion-view view-title="Reports" cache-view="false" hide-back-button="true" ng-init="StartLoading()">
+    <ion-content padding="true">
+
+        <div ng-show="errordata">
+            <div ng-repeat="data in Invoice_Report">
+
+                <ion-item class="item-thumbnail-left item-text-wrap" ng-click="InvoiceDetail(data.Id)">
+
+                    <!--<img src="img/isp.png">-->
+                    <p style="color: #000;"><b>{{data.UserId.ContactId.Name}}</b></p>
+                    <p style="color: #000;">Invoice Number: #{{data.InvoiceNumber}}</p>
+                    <p ng-show="id">{{data.Id}}</p>
+
+                </ion-item>
+
+            </div>
+        </div>
+
+
+        <center>
+            <p ng-show="errormsg" style="color:red;">No Reports Found</p>
+        </center>
+
+
+
+    </ion-content>
+</ion-view>

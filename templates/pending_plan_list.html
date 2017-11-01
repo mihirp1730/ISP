@@ -1,0 +1,21 @@
+<ion-view view-title="Pending Plans" hide-back-button="true" ng-init="GetPendingChangePlans()">
+  <ion-content padding="true">
+
+  
+  <center>
+    <p ng-show="PendingPlansError" style="color:red;">No records found</p>
+  </center>
+ 
+<div ng-show="PlanChangePending">
+
+   <a class="item item-icon-right" ng-repeat="data in PendingChangeList" ng-click="PlanchangePendingDetail(data.Id)">
+        {{data.UserId.ContactId.Name}}
+        <p ng-show="plnchnge_id">{{data.Id}}</p> 
+        <i class="icon ion-arrow-right-b"></i>
+      </a>
+
+</div>
+  
+
+  </ion-content>
+</ion-view>

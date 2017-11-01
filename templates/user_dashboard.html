@@ -1,0 +1,59 @@
+<ion-view view-title="Dash Board" ng-init="GetCurrentPlan()">
+    <ion-content>
+
+        <h4>&nbsp;&nbsp;&nbsp;Current Plan</h4>
+        <hr>
+
+        <div ng-repeat="data in CurrentPlan">
+
+            <p ng-show="p_id">{{data.Id}}</p>
+
+
+            <ul class="list">
+
+                <li class="item" style="border-bottom-color:rgba(229, 229, 229, 0.66);">
+                    <p style="color:#000;">Name</p>
+                    <p style="color:rgba(68, 68, 68, 0.84);">{{data.Name}}</p>
+                </li>
+
+                <li class="item" style="border-bottom-color:rgba(229, 229, 229, 0.66);">
+                    <p style="color:#000;">Speed</p>
+                    <p style="color:rgba(68, 68, 68, 0.84);">{{data.Speed}}</p>
+                </li>
+
+
+                <li class="item" style="border-bottom-color:rgba(229, 229, 229, 0.66);">
+                    <p style="color:#000;">Duration</p>
+                    <p style="color:rgba(68, 68, 68, 0.84);">{{data.Duration}}</p>
+                </li>
+
+
+                <li class="item" style="border-bottom-color:rgba(229, 229, 229, 0.66);">
+                    <p style="color:#000;">Price</p>
+                    <p style="color:rgba(68, 68, 68, 0.84);">{{data.Price}}</p>
+                </li>
+
+
+                <li class="item" style="border-bottom-color:rgba(229, 229, 229, 0.66);">
+                    <p style="color:#000;">Start Date</p>
+                    <p style="color:rgba(68, 68, 68, 0.84);">{{data.StartDate | date : d/MMMM/yyyy}}</p>
+                </li>
+
+
+                <li class="item" style="border-bottom-color:rgba(229, 229, 229, 0.66);">
+                    <p style="color:#000;">End Date</p>
+                    <p style="color:rgba(68, 68, 68, 0.84);">{{data.EndDate | date : d/MMMM/yyyy}}</p>
+                </li>
+            </ul>
+
+            <center>
+                <button class="button button-block button-positive" ng-click="make_payment(data.Id, data.Price)" style="background-color: #0074ce; width:96%;">
+                    Proceed To Pay
+                </button>
+            </center>
+
+
+        </div>
+
+    </ion-content>
+</ion-view>

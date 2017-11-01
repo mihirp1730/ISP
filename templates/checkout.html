@@ -1,0 +1,52 @@
+<ion-view view-title="Check Out" ng-init="subtotal()" hide-back-button="true">
+
+
+ <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_inward()">
+              </button>
+  
+          </ion-nav-buttons>
+  <ion-content padding="true">
+
+ <form ng-submit="Add_inward(trans_type, paid_amount)">
+
+
+      <br><br>
+
+           <p>
+           <b>Total Amount:</b>&nbsp;Rs.{{Total_amount}} 
+           </p> 
+
+            <p>
+           <b>Total Tax:</b>&nbsp;Rs.{{Total_tax}} 
+           <p>
+           <hr>
+           <p><b>Total:</b>&nbsp;Rs.{{Total_amount+Total_tax}}</p>    
+
+<br>
+<h3>Transaction Type</h3>
+<ion-radio ng-model="trans_type" ng-value="'Cash'">Cash</ion-radio>
+<ion-radio ng-model="trans_type" ng-value="'Credit'">Paytm: +919033540113</ion-radio>
+  
+<br>
+ <label class="item item-input">
+      <input type="number" placeholder="Enter Amount" maxlength="10" data-ng-minLength="1" ng-model="paid_amount">
+ </label>
+
+<div ng-show="img"><input type="file" id="your-files" multiple></div>
+   
+   <br>
+        
+  	     <button class="button button-block button-positive" ng-click="CheckOut()" style="background-color: #0074ce;">
+  		    Add
+	       </button>
+
+ </form>      
+      
+  </ion-content>
+</ion-view>

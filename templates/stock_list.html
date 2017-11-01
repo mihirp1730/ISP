@@ -1,0 +1,21 @@
+<ion-view view-title="Stock" ng-init="StartLoading()" hide-back-button="true">
+
+  <ion-content padding="true">
+  <div ng-show="errordata">
+  <ion-item class="item-thumbnail-left item-text-wrap" ng-repeat="data in Inventory">
+  
+     <img src="img/isp.png">
+     <p style="color: #000;"><b>{{data.ProductId.Name}}</b></p>
+     <p style="color: #000;">{{data.VariantId.Name}} : {{data.Quantity}} {{data.ProductId.UnitOfMeasure}}</p>
+     <hr>
+     <p style="color: #000;">Total : {{data.Quantity}} {{data.ProductId.UnitOfMeasure}}</p>
+     
+ </ion-item> 
+</div>
+
+ <center>
+    <p ng-show="errormsg" style="color:red;">No Assets Found</p>
+  </center>
+  
+  </ion-content>
+</ion-view>

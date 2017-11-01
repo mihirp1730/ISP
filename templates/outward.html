@@ -1,0 +1,71 @@
+<ion-view view-title="Outward" hide-back-button="true" ng-init="GetProduct_Variant_Service()">
+
+ <ion-nav-bar class="bar-stable">
+      
+      </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_outward()">
+              </button>
+  
+          </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+   
+      <i class="icon ion-ios-cart-outline" ng-click="t_cart()" style="float: right; color:#f8f8f8; width:31px; font-size: 34px;"></i>
+     
+        
+    </ion-nav-buttons>
+
+  <ion-content padding="true">
+
+    <form ng-submit="addToCart1(qty)">
+    
+    
+        
+       <label class="item item-input item-select">
+        <div class="input-label">
+          Product
+        </div>
+        <select ng-model="Outward.Data" ng-options="data.Name for data in product" ng-change="p_id(Outward.Data.Name)">
+       </select>
+       </label>
+
+       <label class="item item-input item-select">
+        <div class="input-label">
+          Variant
+        </div>
+        <select ng-model="Outward.Variant" ng-options="data.Name for data in VariantNames" ng-change="v_id(Outward.Variant.Name)">
+       </select>
+
+       </label>
+
+       <label class="item item-input item-select">
+        <div class="input-label">
+          Plan
+        </div>
+        <select ng-model="Outward.Plan" ng-options="data.Name for data in service" ng-change="pln_id(Outward.Plan.Name)">
+       </select>
+
+       </label>
+
+       
+
+       <label class="item item-input">
+          <input type="number" placeholder="Quantity" maxlength="8" data-ng-minLength="1" ng-model="qty">
+        </label>
+
+        </label>
+
+       
+        
+      
+     
+         <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+           Add To Cart
+         </button>
+       
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,116 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+
+        <ion-content>
+
+            <ion-item style="background-color: #f8f8f8; height:133px; padding-top: 0px;">
+                <center><img src="img/isp.png" style="height:60px; margin-top:35px; width: 100px;" /></center>
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNav" ng-click="Admin_Dash()">
+                <i class="ion-home">&nbsp;&nbsp;</i>Dashboard
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNav1" href="#customer_list">
+                <i class="ion-clipboard">&nbsp;&nbsp;</i>Manage Users
+            </ion-item>
+
+            <!--<ion-item menu-close ng-show="$root.isShowNav14" href="#/app/pending_plan_list">
+           <i class="ion-clipboard">&nbsp;&nbsp;</i>Pending Plans
+           </ion-item> -->
+
+            <ion-item menu-close ng-show="$root.isShowNav13" href="#/app/reports">
+                <i class="ion-clipboard">&nbsp;&nbsp;</i>Reports
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNav2" href="#/app/list_plan">
+                <i class="ion-clipboard">&nbsp;&nbsp;</i>Manage Plans
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNav3" href="#/app/stock">
+                <i class="ion-plus">&nbsp;&nbsp;</i>Add Inward
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNav4" href="#/app/stock_list">
+                <i class="ion-clipboard">&nbsp;&nbsp;</i>Stock
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNav6" href="#/app/product">
+                <i class="ion-plus">&nbsp;&nbsp;</i>Add Product
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNav7" href="#/app/variant">
+                <i class="ion-plus">&nbsp;&nbsp;</i>Add Variant
+            </ion-item>
+
+            <!--  <ion-item menu-close ng-show="$root.isShowNav8" href="#/app/assets_list">
+            Manage Assets
+           </ion-item>  -->
+            <ion-item menu-close ng-show="$root.isShowNav9" href="#/app/complain_catagory">
+                <i class="ion-plus">&nbsp;&nbsp;</i>Add Catagory
+            </ion-item>
+
+            <!--<ion-item menu-close ng-show="$root.isShowNav10" href="#/app/complain_status">
+            <i class="ion-plus">&nbsp;&nbsp;</i>Add Status
+           </ion-item>-->
+
+            <ion-item menu-close ng-show="$root.isShowNav11" href="#pending_complain">
+                <i class="ion-clipboard">&nbsp;&nbsp;</i>Manage Complains
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNav12" href="#pending_payment">
+                <i class="ion-clipboard">&nbsp;&nbsp;</i>Payment Details
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNavU1" href="#/app/user_dashboard">
+                <i class="ion-home">&nbsp;&nbsp;</i>Dash Board
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNavU2" href="#/app/complain">
+                <i class="ion-plus">&nbsp;&nbsp;</i>Add Complain
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNavU3" href="#/app/viewcomplain">
+                <i class="ion-eye">&nbsp;&nbsp;</i>View Complain
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNavU4" href="#user_pending_payment">
+                <i class="ion-clipboard">&nbsp;&nbsp;</i>Payment History
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNavU5" href="#/app/services">
+                <i class="ion-clipboard">&nbsp;&nbsp;</i>Services
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNavT1" href="#/app/tech_notification">
+                <i class="ion-home">&nbsp;&nbsp;</i>Dash Board
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNavT2" href="#/app/customer_list_tech">
+                <i class="ion-clipboard">&nbsp;&nbsp;</i>Customers List
+            </ion-item>
+
+            <ion-item menu-close ng-show="$root.isShowNavT3" href="#/app/viewcomplaintech">
+                <i class="ion-clipboard">&nbsp;&nbsp;</i>InProgress Complains
+            </ion-item>
+
+            <ion-item menu-close href="#/login">
+                <i class="ion-power">&nbsp;&nbsp;</i>Logout
+            </ion-item>
+
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

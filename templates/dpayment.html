@@ -1,0 +1,25 @@
+<ion-view view-title="Due Payment Detail" ng-init="DPaymentDetailPage()">
+
+    <ion-nav-bar class="bar-stable">
+    </ion-nav-bar>
+
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_notification()">
+            </button>
+    </ion-nav-buttons>
+
+    <ion-content padding="true">
+
+
+
+        <div ng-repeat="data in duepayment">
+            <div class="card">
+                <a class="item">
+                    <p ng-show>{{data.UserId.Id}}</p>
+                    <p>{{data.UserId.ContactId.Name}}<span style="float: right;">{{data.TotalAmount}}</span></p>
+                    <p>{{data.UserId.ContactId.Email}}</p>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

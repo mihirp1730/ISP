@@ -1,0 +1,38 @@
+<ion-view title="Create Company"  hide-back-button="true">
+
+               <ion-nav-buttons side="right">
+              
+               <i class="ion-android-notifications header-badge" ng-click="notificationadmin()" style="float: right; color:#f8f8f8; width:31px; margin-top: 7px; font-size: 34px;">
+               <span style="font-size: 11px; margin-top: -26px; color:red;margin-left: 6.5px;">
+               {{statusnum+completedprogressss+followupnum}}</span></i>
+
+              </ion-nav-buttons>
+
+  <ion-content class="has-header">
+  
+                 <br><br>
+               
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button" ng-click="selectPicture()" style="background-color: #b2b2b2;">Select logo</a> 
+                <div ng-show="asss">{{picData}}</div>
+                <br>
+                <div id="demo" style="margin-left: 28px;"></div>
+              
+                 <br><br>
+
+                <center>
+                <label class="item item-input" style="border-color:#1e3368; width:90%;">
+                <input type="text" placeholder="Enter Company Name" ng-model="company">
+                </label>
+                </center>
+
+                <br><br>
+
+                <button class="button button-block" style="background-color:#1e3368; margin-left: 9px;width:93.5%;" ng-click="upload()">Create Company</button>
+
+               
+
+
+
+   
+  </ion-content>
+</ion-view>
